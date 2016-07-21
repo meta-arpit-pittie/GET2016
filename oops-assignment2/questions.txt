@@ -1,0 +1,6 @@
+Q1. Name,Text
+Q2. Age,Number
+Q3. Product used,Single Select,Amazon/Flipkart/Snapdeal
+Q4. Overall Rating,Single Select,1/2/3/4/5
+Q5. Area of improvement,Multi Select,Service Quality/Communication/Delivery Process
+Q6. Feedback,Text
