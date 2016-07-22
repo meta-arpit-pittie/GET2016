@@ -48,16 +48,13 @@ public class Question implements Comparable<Question>{
 		String[] temp;
 		
 		//Getting the text of question excluding the question number
-		temp = question.split(" ");
-		for(int i=1; i < temp.length; i++) {
-			arg1 = arg1 + temp[i];
-		}
+		temp = question.split(". ");
+		arg1=temp[1];
 		
 		//Getting the text of question excluding the question number
-		temp = o.getQuestion().split(" ");
-		for(int i=1; i < temp.length; i++) {
-			arg2 = arg2 + temp[i];
-		}
+		temp = o.getQuestion().split(". ");
+		arg2=temp[1];
+		
 		return arg1.compareTo(arg2);
 	}
 }
