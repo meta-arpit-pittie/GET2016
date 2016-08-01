@@ -66,6 +66,7 @@ public class MyDoubleLinkedList<E> implements MyList<E>{
 		if(last == null) {
 			head = node;
 		} else {
+			if(last !=null)
 			last.next = node;
 		}
 		last = node;
@@ -111,6 +112,13 @@ public class MyDoubleLinkedList<E> implements MyList<E>{
 		}
 		return x;
 	}
+	/*public void display() {
+		Node<E> x= head;
+		while(x != null) {
+			System.out.println("lock "+x.data);
+			x=x.next;
+		}
+	}*/
 	
 	/**
 	 * Method to get the reference of the object starting at the particular index
@@ -245,18 +253,26 @@ public class MyDoubleLinkedList<E> implements MyList<E>{
 		Node<E> x = head;
 		if(index == 0) {	//if removing the first element
 			old = head.data;
-			head.next.prev = null;
+			if(head.next != null) {
+				head.next.prev = null;
+			}
 			head = head.next;
 		} else {
-			//loop to traverse till the index vlue
+			//loop to traverse till the index value
 			for(int i=0; i < index; i++) {
 				x = x.next;
 			}
 			old = x.data;
-			x.prev.next = x.next;
-			x.next.prev = x.prev;
-			size--;
+			if(x.prev != null) {
+				x.prev.next = x.next;
+			}
+			if(x.next != null) {
+				x.next.prev = x.prev;
+			} else {
+				last = x.prev;
+			}
 		}
+		size--;
 		return old;
 	}
 
