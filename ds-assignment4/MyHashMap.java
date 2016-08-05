@@ -10,6 +10,7 @@ public class MyHashMap<K, V> {
 	private Node<K, V>[] bucket;	//The bucket array for the mapping
 	private static final int DEFAULT_CAPACITY = 7;	//The default capacity of bucket
 	private int capacity;	//Capacity of the bucket defined
+	private int[] roomNo;
 	
 	/**
 	 * Class to create a key value pair for the mapping
@@ -35,12 +36,24 @@ public class MyHashMap<K, V> {
 	public MyHashMap() {
 		bucket = new Node[DEFAULT_CAPACITY];
 		capacity = DEFAULT_CAPACITY;
+		
+		//Generating room numbers
+		roomNo = new int[DEFAULT_CAPACITY];
+		for(int i=0; i < DEFAULT_CAPACITY; i++) {
+			roomNo[i] = 101 + i;
+		}
 	}
 	
 	@SuppressWarnings("unchecked")
 	public MyHashMap(int capacity) {
 		bucket = new Node[capacity];
 		this.capacity = capacity;
+		
+		//Generating room numbers
+		roomNo = new int[capacity];
+		for(int i=0; i < capacity; i++) {
+			roomNo[i] = 101 + i;
+		}
 	}
 	
 	/**
@@ -58,7 +71,6 @@ public class MyHashMap<K, V> {
 		}
 		//Getting index value for the bucket
 		index = hash(key);
-		mapping = new Node(key, value, null);
 		
 		//Checking if the bucket at index value is already filled
 		if(bucket[index] != null) {
@@ -78,6 +90,8 @@ public class MyHashMap<K, V> {
 				}
 			}
 		}
+		value = (V) new Integer(roomNo[index]);
+		mapping = new Node(key, value, null);
 		//Adding the node at the calculated index position in the bucket
 		bucket[index] = mapping;
 	}
