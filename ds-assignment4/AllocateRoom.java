@@ -79,18 +79,6 @@ public class AllocateRoom {
 				}
 			} while (age < 1);
 			
-			/*//loop to get the correct value of room number
-			do {
-				//Exception handling for the numeric value for room number
-				try {
-					System.out.println("Enter room number");
-					roomNo = Integer.parseInt(scan.nextLine());
-					break;
-				} catch(Exception e) {
-					System.out.println("Enter numerals only");
-				}
-			} while (true);*/
-			
 			//creating object of customer
 			customer = new Customer(name, age);
 			
