@@ -55,13 +55,17 @@ public class AllocateRoom {
 	public void takeCustomer() {
 		String name;
 		int age;
-		int roomNo;
 		Customer customer;
 		
 		//loop to take input for every customer
 		for(int i=0; i < totalCustomer; i++) {
 			System.out.println("Enter name");
-			name = scan.nextLine();
+			name = "";
+			try {
+				name = scan.nextLine();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 			
 			//loop to get the correct value of customer age
 			do {
@@ -75,7 +79,7 @@ public class AllocateRoom {
 				}
 			} while (age < 1);
 			
-			//loop to get the correct value of room number
+			/*//loop to get the correct value of room number
 			do {
 				//Exception handling for the numeric value for room number
 				try {
@@ -85,7 +89,7 @@ public class AllocateRoom {
 				} catch(Exception e) {
 					System.out.println("Enter numerals only");
 				}
-			} while (true);
+			} while (true);*/
 			
 			//creating object of customer
 			customer = new Customer(name, age);
@@ -93,7 +97,8 @@ public class AllocateRoom {
 			//Adding the customer object to the list
 			keyList.add(customer);
 			//Mapping the customer with the room number
-			rooms.insert(customer, roomNo);
+			//Room number will be generated automatically
+			rooms.insert(customer, null);
 		}
 	}
 	
