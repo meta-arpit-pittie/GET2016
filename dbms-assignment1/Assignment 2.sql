@@ -6,30 +6,30 @@ USE LIS;
 /*Creating tables for the library information system */
 CREATE TABLE members(
     member_id VARCHAR(20) PRIMARY KEY,
-    member_name VARCHAR(40),
-    address_line1 VARCHAR(50),
+    member_name VARCHAR(40) NOT NULL,
+    address_line1 VARCHAR(50) NOT NULL,
     address_line2 VARCHAR(50),
-    category VARCHAR(30)
+    category VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE subjects(
     subject_id VARCHAR(20) PRIMARY KEY,
-    subject_name VARCHAR(30)
+    subject_name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE publishers(
     publisher_id VARCHAR(20) PRIMARY KEY,
-    publisher_name VARCHAR(40)
+    publisher_name VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE authors(
     author_id VARCHAR(20) PRIMARY KEY,
-    author_name VARCHAR(40)
+    author_name VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE titles(
     title_id INT PRIMARY KEY,
-    title_name VARCHAR(50),
+    title_name VARCHAR(50) NOT NULL,
     subject_id VARCHAR(20),
     publisher_id VARCHAR(20),
     CONSTRAINT fk_publisher_id FOREIGN KEY (publisher_id)
@@ -41,8 +41,8 @@ CREATE TABLE titles(
 CREATE TABLE books(
     accession_number INT PRIMARY KEY,
     title_id INT,
-    purchase_dt DATE,
-    price DECIMAL(7,2),
+    purchase_dt DATE NOT NULL,
+    price DECIMAL(7,2) NOT NULL,
     status VARCHAR(20),
     CONSTRAINT fk_title_id_books FOREIGN KEY (title_id)
         REFERENCES titles (title_id)
@@ -59,10 +59,10 @@ CREATE TABLE title_author(
 );
 
 CREATE TABLE book_issue(
-    issue_dt DATE,
+    issue_dt TIMESTAMP,
     accession_number INT,
     member_id VARCHAR(20),
-    due_dt DATE,
+    due_dt TIMESTAMP,
     PRIMARY KEY (issue_dt,accession_number,member_id),
     CONSTRAINT fk_accession_number_book_issue FOREIGN KEY (accession_number)
         REFERENCES books (accession_number),
@@ -74,7 +74,7 @@ CREATE TABLE book_return(
     return_dt DATE,
     accession_number INT,
     member_id VARCHAR(20),
-    issue_dt DATE,
+    issue_dt TIMESTAMP,
     PRIMARY KEY (return_dt,accession_number,member_id),
     CONSTRAINT fk_accession_number_book_return FOREIGN KEY (accession_number)
         REFERENCES books (accession_number),
@@ -88,10 +88,12 @@ CREATE TABLE book_return(
 SHOW TABLES;
 
 /* Setting default values */
+select CURRENT_TIMESTAMP+INTERVAL 15  DAY;
+SELECT CURDATE();
 ALTER TABLE book_issue MODIFY COLUMN 
-    issue_dt DATE DEFAULT CURDATE();
+    issue_dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 ALTER TABLE book_issue MODIFY COLUMN 
-    due_dt DATE DEFAULT DATE_ADD(issue_dt, INTERVAL 15 DAY);
+    due_dt TIMESTAMP DEFAULT DATE_ADD(issue_dt,INTERVAL 15 DAY);
 
 /* Removing the members table from the database */
 ALTER TABLE book_issue DROP 
