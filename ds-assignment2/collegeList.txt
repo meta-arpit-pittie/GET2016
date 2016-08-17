@@ -1,0 +1,5 @@
+4 GIT Jaipur 1
+3 ACEIT Jaipur 1
+5 KCCITM Noida 1
+1 IIT Delhi 2
+2 MNIT Jaipur 1
