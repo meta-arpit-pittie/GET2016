@@ -1,0 +1,68 @@
+body {
+	background-color: #e3ebed;
+	padding: 10px;
+	height: 100%;
+}
+
+#container {
+	background-color: white;
+	padding: 10px;
+	margin-top: 15px;
+	height: 800px;
+}
+
+#header {
+	background-color: #eef6f8;
+	border: solid #adc9e1;
+	color: #91b5d7;
+	margin-top: 10px;
+}
+
+#header h1 {
+	margin-left: 20px;
+	margin-top: 25px;
+	margin-bottom: 
+}
+
+#content {
+	background-color: white;
+}
+
+#image {
+	height: 100%;
+	margin: 15px;
+	border: solid 3px black;
+	float: left;
+}
+
+#image h2 {
+	text-align: center;
+}
+
+#image img {
+	width: 100%;
+}
+
+#profile {
+	float: left;
+	margin-left: 20px;
+}
+
+.info {
+	float: right;
+	display: block;
+	width: 100%;
+}
+
+.infoHeading {
+	float: left;
+}
+
+.details {
+	float: left;
+	margin-left: 10px;
+}
+
+.infoHeading p {
+	font-weight: bold;
+}
