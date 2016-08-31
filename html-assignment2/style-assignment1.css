@@ -1,0 +1,83 @@
+* {
+	margin: 0px auto;
+}
+
+#wrapper {
+	background-color: #ededed;
+	width: 100%;
+	float: left;
+}
+
+header {
+	margin: 20px;
+}
+
+article {
+	width: 55%;
+	/*border: solid;*/
+	margin-left: 25%;
+	padding-bottom: 10px;
+}
+
+article label {
+	margin: 0px 5px;
+}
+
+.label-name {
+	width: 30%;
+	text-align: right;
+	float: left;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.icon {
+	width: 40%;
+	margin-left: 30px;
+	display: inline-block;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+}
+
+form label:nth-child(19) .icon {
+	border-style: none;
+	float: left;
+}
+
+.icon span {
+	float: left;
+	background-color: #eeeeee;
+	width: 10%;
+	padding: 9px 0px 9px 11px;
+}
+
+input:invalid, textarea:invalid {
+	border: 1px solid red;
+}
+
+article input, article textarea, article select, article option, article button {
+	float: left;
+	display: block;
+	width: 86.5%;
+	border: ridge;
+	padding: 7px;
+	border-radius: 0px 5px 5px 0px;
+	margin-right: 0px;
+	box-sizing: border-box;
+}
+
+article input[type="radio"] {
+	border: none;
+	width: auto;
+	margin-right: 16px;
+}
+
+article button {
+	background-color: #ec9632;
+	color: white;
+	width: initial;
+	border-radius: 5px;
+	border-style: none;
+	margin-left: 53%;
+	padding: 10px;
+}

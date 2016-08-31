@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cross</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000" height="700"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+
+		ctx.fillStyle = "#fcb03c";
+		ctx.arc(300,300,200,0,2*Math.PI);
+		ctx.fill();
+
+		ctx.fillStyle = "#ffffff";
+		ctx.beginPath();
+		ctx.moveTo(290,110);
+		ctx.lineTo(290,290);
+		ctx.lineTo(110,290);
+		ctx.lineTo(110,310);
+		ctx.lineTo(290,310);
+		ctx.lineTo(290,490);
+		ctx.lineTo(310,490);
+		ctx.lineTo(310,310);
+		ctx.lineTo(490,310);
+		ctx.lineTo(490,290);
+		ctx.lineTo(310,290);
+		ctx.lineTo(310,110);
+		ctx.closePath();
+		ctx.fill();
+	</script>
+</body>
+</html>
