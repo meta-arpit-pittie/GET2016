@@ -1,0 +1,19 @@
+<!--Assignment 2
+To show custom message based on
+two radio fields having two options each-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combination Message</title>
+    </head>
+    <body>
+        <form action="" method="post" onsubmit="showMessage()">
+            <input type="radio" name="side" id="sideFront" value="Front end" required/>Front end
+            <input type="radio" name="side" id="sideBack" value="Back end" required/>Back end<br/>
+            <input type="radio" name="lang" id="langJava" value="Java" required/>Java
+            <input type="radio" name="lang" id="langJs" value="Javascript" required/>Javascript<br/>
+            <input type="submit" value="Submit Form"/>
+        </form>
+        <script src="differentCombinationMessage.js"></script>
+    </body>
+</html>
