@@ -1,0 +1,20 @@
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+select {
+    margin: 10px;
+}
+
+table {
+    margin: 10px;
+    display: none;
+    text-align: left;
+    border: 1px solid;
+}
+
+.error {
+    color: red;
+    display: none;
+}

@@ -1,0 +1,37 @@
+<!--Assignment 4
+To display the input change value in the empty div
+And animate the color change of the input box on the value change-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Animate</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <table>
+                <tr>
+                    <label id="nameLabel">
+                        <td>Name : </td>
+                        <td><input type="text" id="name" placeholder="Name"/></td>
+                    </label><br/>
+                </tr>
+                <tr>
+                    <label>
+                        <td>Age : </td>
+                        <td><input type="text" id="age" placeholder="Age"/></td>
+                    </label><br/>
+                </tr>
+                <tr>
+                    <label>
+                        <td>Address : </td>
+                        <td><textarea rows="3" id="address" placeholder="Address"></textarea></td>
+                    </label><br/>
+                </tr>
+            </table>
+            <div id="result"></div>
+            <script src="inputAnimate.js"></script>
+        </div>
+    </body>
+</html>
