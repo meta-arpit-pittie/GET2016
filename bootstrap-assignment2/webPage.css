@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav .container-fluid {
+    background-color: #c36464;
+}
+
+nav .navbar-header h1 {
+    color: white;
+}
+
+nav .img-circle {
+    width: 10vh;
+    height: 10vh;
+    background: #f0677c;
+}
+
+nav .img-circle span {
+    width: 8vh;
+}
+
+nav .glyphicon, footer p {
+    color: white;
+}
+
+.spacer {
+    height: 20px;
+    clear: both;
+}
+
+nav .navbar .container .active a {
+    background-color: #c36464;
+}
+
+nav .navbar .container a {
+    color: white;
+}
+
+article h2 {
+    color: #c36464;
+}
+
+article h2 hr {
+    height: 2px;
+    background-color: #c36464;
+}
+
+article .row .mainBlock {
+    color: white;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+article .row .img-circle {
+    width: 10vh;
+    height: 10vh;
+    border: 2px solid white;
+}
+
+article .row .img-circle span {
+    width: 8 vh;
+}
+
+article #notification {
+    background-color: #b9b739;
+}
+
+article #photogallery {
+    background-color: #f94c4c;
+}
+
+article #favourites {
+    background-color: #119c7e;
+}
+
+article #announcements {
+    background-color: #b739b9;
+}
+
+article #leftSide .panel-heading p span {
+    background-color: #5cb85c;
+    padding: 5px 8px;
+    float: right;
+}
+
+article #leftSide .panel-heading span .fa {
+    color: white;
+}
+
+article #leftSide hr {
+    height: 1px;
+    background-color: #ebebeb;
+}
+
+article #leftSide .panel-body span {
+    padding: 5px;
+}
+
+article #leftSide .panel-body i {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+article #leftSide .panel-body #align-left-icon {
+    color: #3c763d;
+}
+
+article #leftSide .panel-body #info-sign-icon {
+    color: #a94442;
+}
+
+article #leftSide .panel-body #comment-icon {
+    color: #8a6d3b;
+}
+
+article #leftSide .panel-body #edit-icon {
+    color: #aa4846;
+}
+
+article #leftSide .panel-footer button {
+    width: 100%;
+}
+
+article #leftSide table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+article #leftSide #social {
+    background-color: #fcf8e3;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+article .success {
+    background-color: #dff0d8;
+    padding: 15px 25px 5px;
+    border-radius: 5px;
+}
+
+article .danger {
+    background-color: #f2dede;
+    padding: 15px 25px 5px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #c36464;
+}
