@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PhonceCat</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+        <script src="js/mobile.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="/css/style.css" media="screen" title="no title">
+    </head>
+    <body>
+        <div class="container" ng-app="phonecat">
+            <div class="spacer"></div>
+            <div class="row" ng-controller="descriptionCtrl">
+                <div class="col-xs-3">
+                    <form>
+                        <div class="form-group">
+                            <label for="search" class="control-label">Search</label>
+                            <input type="search" class="form-control" id="search" ng-model="searchBox" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="sort" class="control-label">Sort body</label>
+                            <select class="form-control" ng-model="sortbox">
+                                <option value="id">Newest</option>
+                                <option value="name">Alphabetical</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-9">
+                    <div class="row table-bordered mobiles" ng-repeat="obj in mobileDescription | filter : searchBox | orderBy : sortbox">
+                        <div class="col-xs-3">
+                            <div><img src="{{obj.imageUrl}}" alt="mobile" class="img  img-responsive"/></div>
+                        </div>
+                        <div class="col-xs-9">
+                            <h3><a href="#">{{obj.name}}</a></h3>
+                            <p>
+                                {{obj.snippet}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
