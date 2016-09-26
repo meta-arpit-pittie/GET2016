@@ -1,0 +1,13 @@
+.container .navbar-collapse ul li a {
+    text-decoration: none;
+}
+
+.container .row .panel .panel-heading h5 {
+    display: inline;
+}
+
+.modal {
+    display: block;
+    height: auto;
+    bottom: auto;
+}
