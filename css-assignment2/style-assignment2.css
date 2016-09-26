@@ -1,0 +1,218 @@
+* {
+	margin: 0px auto;
+}
+
+#wrapper {
+	float: left;
+	width: 100%;
+	display: block;
+}
+
+#navigation {
+	background-color: #2d3e50;
+	display: inline-block;
+	width: 100%;
+}
+
+#logo {
+	float: left;
+	color: white;
+	margin-left: 25px;
+	padding: 10px;
+}
+
+#nav {
+	float: right;
+	padding: 10px;
+	display: inline-block;
+	margin-right: 25px;
+}
+
+#nav ul li {
+	list-style: none;
+	display: inline-block;
+	margin: 10px;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+#nav ul li a {
+	color: white;
+}
+
+#nav ul li a:visited {
+	color: #318dd6;
+}
+
+#center-element {
+	background-color: #318dd6;
+	height: 480px;
+	display: inline-block;
+	margin-top: -4px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+#block {
+	display:inline-block;
+	width:100%;
+}
+
+#big-text {
+	border: solid 2px white;
+	height: 40%;
+	width: 50%;
+}
+
+#big-text h1 {
+	text-align: center;
+	padding: 80px;
+	color: white;
+}
+
+#other-text {
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+#other-text input {
+	background-color: white;
+	padding: 5px 15px;
+	border-radius: 5px;
+	color: #318dd6;
+}
+
+#information {
+	background-color: white;
+	margin: 20px 10px;
+	float: left;
+}
+
+.heading {
+	text-align: center;
+}
+
+.info {
+	color: #318dd6;
+	width: 23%;
+	margin: 5px;
+	display: inline-block;
+	text-align: left;
+	float: left;
+	padding: 5px;
+	text-align: justify;
+}
+
+.info h5 {
+	margin: auto;
+	display: inline-block;
+	text-align: center;
+}
+
+.info h5 img {
+	float: left;
+	margin-right: 5px;
+}
+
+#tour {
+	background-color: #2d3e50;
+	float: left;
+	width: 100%;
+}
+
+#left-block {
+	width: 40%;
+	float: left;
+	display: flex;
+	align-items: center;
+}
+
+#folded-corner {
+	padding: 40px;
+}
+
+#folded-corner img {
+	width: 30%;
+	margin: 10px;
+}
+
+#right-block {
+	width: 55%;
+	float: right;
+	margin-right: 30px;
+	color: white;
+}
+
+#right-block h3 {
+	padding-top: 50px;
+}
+
+#right-block p {
+	font-size: 13px;
+	padding-right: 15px;
+}
+
+#signup {
+	float: left;
+	background-color: white;
+	width: 100%;
+	display: block;
+}
+
+#signup .heading {
+	margin-bottom: 10px;
+	padding: 20px;
+}
+
+#signup-form {
+	width: 38%;
+	padding: 10px;
+	float: left;
+	display: inline;
+	margin-left: 10px;
+}
+
+#signup-form label {
+	font-weight: bold;
+	padding: 10px;
+}
+
+#signup-form input {
+	padding: 5px;
+	margin: 10px;
+	width: 80%;
+	border-radius: 3px;
+}
+
+#signup-form input[type="submit"] {
+	width: initial;
+	color: white;
+	background-color: #318dd6;
+	padding: 10px 20px;
+	border-radius: 8px;
+}
+
+#contact-details {
+	width: 57%;
+	float: right;
+	margin-right: 10px;
+	padding: 10px;
+}
+
+#footer {
+	text-align: center;
+	width: 100%;
+	background-color: black;
+	color: white;
+	display: inline-block;
+}
+
+#footer p {
+	padding: 15px;
+}
