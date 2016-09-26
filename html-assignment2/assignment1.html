@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 1</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style-assignment1.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Contact Us Today!</h1>
+		</header>
+		<article>
+			<form action="" method="POST">
+				<label>
+					<div class="label-name">
+						First Name
+					</div>
+					<div class="icon">
+						<span class="fa fa-user"></span>
+						<input type="text" name="fname" placeholder="First Name" pattern="[A-Za-z]{2,20}" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Last Name
+					</div>
+					<div class="icon">
+						<span class="fa fa-user"></span>
+						<input type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z]{2,20}" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						E-mail
+					</div>
+					<div class="icon">
+						<span class="fa fa-envelope"></span>
+						<input type="email" name="email" placeholder="E-Mail Address" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Phone #
+					</div>
+					<div class="icon">
+						<span class="fa fa-phone"></span>
+						<input type="number" name="phone" placeholder="(845)5555-1212" minlength="10" maxlength="10" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Address
+					</div>
+					<div class="icon">
+						<span class="fa fa-home"></span>
+						<input type="text" name="address" placeholder="Address" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						City
+					</div>
+					<div class="icon">
+						<span class="fa fa-home"></span>
+						<input type="text" name="city" placeholder="City" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						State
+					</div>
+					<div class="icon">
+						<span class="fa fa-list"></span>
+					<select name="state">
+						<option value="Rajasthan">Please select an option</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Goa">Goa</option>
+					</select>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Zip Code
+					</div>
+					<div class="icon">
+						<span class="fa fa-home"></span>
+						<input type="number" name="zipcode" placeholder="Zip Code" minlength="6" maxlength="6" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Website or domain name
+					</div>
+					<div class="icon">
+						<span class="fa fa-globe"></span>
+						<input type="url" name="website" placeholder="Website or domain name" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Do you have hosting?
+					</div>
+					<div class="icon">
+						<input type="radio" name="hosting" value="Yes" checked>Yes<br/>
+						<input type="radio" name="hosting" value="No">No
+					</div>
+				</label><br/><br/>
+				<label>
+					<div class="label-name">
+						Project Description
+					</div>
+					<div class="icon">
+						<span class="fa fa-pencil"></span>
+						<textarea rows="3" name="description" required></textarea>
+					</div>
+				</label><br/><br/>
+				<label>
+					<button type="submit" name="submit">Send <span class="fa fa-paper-plane"></span></button><br/>
+				</label><br/>
+			</form>
+		</article>
+	</div>
+</body>
+</html>
