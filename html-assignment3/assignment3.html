@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 3</title>
+<body>
+	<div>
+		<p>Drag the image into the block.</p>
+		<div id="block" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<img id="logo" src="http://www.metacube.com/images/logo_meta.gif" draggable="true" ondragstart="drag(event)">
+	</div>
+	
+	<style>
+		#block {
+		    width: 350px;
+		    height: 70px;
+		    padding: 10px;
+		    border: 1px solid #aaaaaa;
+		}
+	</style>
+	<script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text",ev.target.id);
+		}
+
+		function drop(ev) {
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 1</title>
+</head>
+<body>
+	<div>
+		<h1 id="header">Count for hit</h1>
+		<p id="count"></p>
+	</div>
+	
+	<script>
+		if(typeof(Storage) !== "undefined") {
+			if(localStorage.getItem("count") !== null) {
+				var c = parseInt(localStorage.getItem("count"));
+				document.getElementById("count").innerHTML = c;
+				localStorage.setItem("count",c+1);
+			} else {
+				localStorage.setItem("count",1);
+				document.getElementById("count").innerHTML = 0;
+			}
+		} else {
+			document.getElementById("count").innerHTML = "Sorry, your browser does not support Local Storage";
+		}
+	</script>
+</body>
+</html>
