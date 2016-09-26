@@ -1,0 +1,14 @@
+[class^="col-"], .container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #ddd;
+}
+
+.container {
+    background-color: #f5f5f5;
+}
+
+.row {
+    padding-left: 3px;
+    padding-right: 3px;
+}
