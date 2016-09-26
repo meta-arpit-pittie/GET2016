@@ -1,0 +1,31 @@
+<!--Assignment 3
+To alert the value of dropdown menu
+based on the radio button selected-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alert Dropdown</title>
+    </head>
+    <body>
+        <form action="" method="post" onsubmit="showAlert()">
+            <input type="radio" name="choice" value="First" required/>First Dropdown
+            <input type="radio" name="choice" value="Second" required/>Second Dropdown<br/>
+            <select id="city" required>
+                <option value="">Please select</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Jodhpur">Jodhpur</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Kota">Kota</option>
+            </select><br/>
+            <select id="state" required>
+                <option value="">Please select</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Goa">Goa</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+            </select><br/>
+            <input type="submit" value="Submit"/>
+        </form>
+        <script src="dropdownMessage.js"></script>
+    </body>
+</html>
