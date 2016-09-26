@@ -1,0 +1,98 @@
+<!-- Assignment 4
+Designing a form -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style-form.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>Contact Us Today!</h1>
+		</header>
+		<article>
+			<form action="" method="POST">
+				<label>
+					<div class="label-name">
+						Name
+					</div>
+					<div class="icon">
+						<span class="fa fa-user"></span>
+						<input type="text" name="name" id="name" placeholder="First Name" pattern="[A-Za-z]{2,30}" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Address
+					</div>
+					<div class="icon">
+						<span class="fa fa-home"></span>
+						<textarea rows="3" name="address" id="address" placeholder="Address" required></textarea>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Phone #
+					</div>
+					<div class="icon">
+						<span class="fa fa-phone"></span>
+						<input type="number" name="phone" id="phone" placeholder="(845)555-1212" min="1000000000" max="9999999999" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						E-mail
+					</div>
+					<div class="icon">
+						<span class="fa fa-envelope"></span>
+						<input type="email" name="email" id="email" placeholder="E-Mail Address" required>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Gender
+					</div>
+					<div class="icon">
+						<input type="radio" name="gender" id="gendermale" value="Male">Male<br/>
+						<input type="radio" name="gender" id="genderfemale" value="Female">Female
+					</div>
+				</label><br/><br/>
+				<label>
+					<div class="label-name">
+						Highest Qualification
+					</div>
+					<div class="icon">
+						<span class="fa fa-list"></span>
+					<select name="qualification" id="qualification">
+						<option value="none">Please select an option</option>
+						<option value="5">5th</option>
+						<option value="8">8th</option>
+						<option value="10">10th</option>
+						<option value="12">12th</option>
+						<option value="Graduation">Graduation</option>
+						<option value="Post Graduation">Post Graduation</option>
+					</select>
+					</div>
+				</label><br/>
+				<label>
+					<div class="label-name">
+						Certification
+					</div>
+					<div class="icon">
+						<input type="checkbox" name="certi" id="JAVA">JAVA<br/>
+						<input type="checkbox" name="certi" id="webDevelopment">Web Development<br/>
+						<input type="checkbox" name="certi" id="UXProgramming">UX Programming<br/>
+						<input type="checkbox" name="certi" id="salesforce">Salesforce
+					</div>
+				</label><br/>
+				<label>
+					<button type="submit" name="submit">Send <span class="fa fa-paper-plane"></span></button><br/>
+				</label><br/>
+			</form>
+		</article>
+	</div>
+</body>
+</html>
