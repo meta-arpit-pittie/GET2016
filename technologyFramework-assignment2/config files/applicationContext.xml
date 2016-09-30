@@ -12,23 +12,16 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-	<bean id="carFacade" 
-		class="com.model.CarFacade">
-	</bean>
 	
-	<bean id="carDAO"
-		class="com.model.CarDAO">
-	</bean>
 	
-	<!-- Step 3: Add support for component scanning -->
 	<context:component-scan base-package="com.controller" />
 	<context:component-scan base-package="com.model"/>
 
-	<!-- Step 4: Add support for conversion, formatting and validation support -->
+	
 	<mvc:annotation-driven/>
-	<context:annotation-config/>
+	
 
-	<!-- Step 5: Define Spring MVC view resolver -->
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/View/" />
