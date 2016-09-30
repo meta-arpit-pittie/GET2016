@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>DesignPattern1</display-name>
   
-  <!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
+  
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -13,7 +13,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<!-- Step 2: Set up URL mapping for Spring MVC Dispatcher Servlet -->
+	
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
@@ -36,49 +36,5 @@
 		<servlet-name>springResourceServlet</servlet-name>
 		<url-pattern>/_ui/*</url-pattern>
 	</servlet-mapping>
-	
-  <!-- <welcome-file-list>
-    <welcome-file>View/index.html</welcome-file>
-    <welcome-file>View/index.htm</welcome-file>
-    <welcome-file>View/index.jsp</welcome-file>
-    <welcome-file>View/default.html</welcome-file>
-    <welcome-file>View/default.htm</welcome-file>
-    <welcome-file>View/default.jsp</welcome-file>
-  </welcome-file-list> -->
-  
-  <!-- <servlet>
-  	<servlet-name>listCarsController</servlet-name>
-  	<servlet-class>com.controller.ListCars</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>listCarsController</servlet-name>
-  	<url-pattern>/carlist</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>detailsOfCarController</servlet-name>
-  	<servlet-class>com.controller.DetailsOfCar</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>detailsOfCarController</servlet-name>
-  	<url-pattern>/details</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>carForm</servlet-name>
-  	<servlet-class>com.controller.CarForm</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>carForm</servlet-name>
-  	<url-pattern>/carform</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>insertUpdate</servlet-name>
-  	<servlet-class>com.controller.EditDetails</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>insertUpdate</servlet-name>
-  	<url-pattern>/submitform</url-pattern>
-  </servlet-mapping> -->
+
 </web-app>
